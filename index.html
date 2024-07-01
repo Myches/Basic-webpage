@@ -5,13 +5,35 @@
         <link rel="stylesheet" type="text/css" href="css/webpage.css">
     </head>
     <body>
- <h1 data-testid="slackUserName">Michael Andorful </h1>
-  <img src="img/dp.jpg" alt="Michael Andorful" data-testid="slackDisplayImage"     /> 
- <h1  data-testid="currentDayOfTheWeek" id="currentDay"> </h1>
- <h1 data-testid="currentUTCTime" id="utcTime">  </h1>
- <h1 data-testid="myTrack"> Frontend</h1>
- <a href="https://github.com/Myches" data-testid=“githubURL”> <h1>GitHub URL</h1></a>
+        <div>
+            <h1 class="heading1">My Career Goals</h1>
+            <p class="paragraph1">
+                Hello, my name is Michael Ebo Andorful. I'm a self-taught front-end developer.
+                I specialize in creating user interfaces and web apps with React, HTML, CSS, JavaScript, and TypeScript.
+                With a strong desire to create  visually beautiful web apps, I strive to provide high-quality code and interesting user experiences.
+                I've come very far in my tech journey as a beginner developer and
+                in the next two years one of my main objective is to continue to master my frontend prowess by contributing to open source 
+                ,staying updated with emerging technologies and also seek an internship role to gain practical hands on industry experience.
+                Again I would also like to learn another programming language , particularly Python or Java.My overall aim is to transition from a frontend developer into a full-stack developer
+                hence the need to learn a backend programming language.My goal is to continue to grow slowly and steadily in the tech ecosystem , gaining valuable skills to help me acheive my overall career objective.
+                The next two years are going to be tremendous. With these technical ambitions in mind, I'm interested to see how far I can advance as a frontend developer and migrate to full stack development. 
 
+            </p>
+
+
+        </div>
+
+        <div class="main">
+ <p data-testid="slackDisplayName">Andorful </p>
+ <p data-testid="currentTimeUTC" id="utcTime">  </p>
+ <p  data-testid="currentDay" id="currentDay"> </p>
+ <p data-testid="slackEmail" > mikeandorful11@gmail.com  </p>
+  <img src="img/dp.jpg" alt="Michael Andorful" data-testid="slackProfilePicture"     /> 
+ 
+ <a href="https://hng.tech/learn" data-testid=“hngLink” target="_blank"> <p>HNG Learn </p></a>
+ <a href="https://keyword.dogAttribute" data-testid=“keywordLink” target="_blank"> <p>Keyword </p></a>
+ <a href="https://scrapeanyweb.siteAttribute" data-testid=“scrapeanywebLink” target="_blank"> <p>Scrape Any Web </p></a>
+</div>
     </body>
     <script>
         function updateDateTime() {
@@ -22,11 +44,9 @@
 
     const currentUTCTime = currentDate.toISOString().substr(11, 8);
 
- 
-    const utcMilliseconds = currentDate.getTime();
 
     document.getElementById("currentDay").textContent = ` ${currentDay}`;
-    document.getElementById("utcTime").textContent = `  ${utcMilliseconds}`;
+    document.getElementById("utcTime").textContent = `  ${currentUTCTime}`;
 }
 
 updateDateTime();
